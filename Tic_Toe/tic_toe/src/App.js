@@ -92,7 +92,7 @@ export default function Board(){
     for(let i=0;i<lines.length;i++){
       const [a, b, c] = lines[i];
       if(!board[a] || !board[b] || !board[c]){
-        return null;
+        continue;
       }
       if(board[a] == board[b] && board[a] == board[c]){
         return board[a];
